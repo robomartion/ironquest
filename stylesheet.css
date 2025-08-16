@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Ancient Modern Tales';
+    src: url('Ancient-Modern-Tales.woff2') format('woff2'),
+         url('Ancient-Modern-Tales.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator';
+    src: url('PixelOperator.woff2') format('woff2'),
+        url('PixelOperator.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Make body a flex container to allow sticky footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    font-family: 'Ancient Modern Tales', sans-serif;
+    padding: 0;
+}
+
+/* Content container so footer can push down */
+body > *:not(.footer) {
+    flex-shrink: 0;
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+    font-size: 64px;
+    margin: 20px 0;
+
+    /* Sharper text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transform: translateZ(0);
+}
+
+/* Responsive font size for mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+.text-block {
+    max-width: 400px;   /* max width on desktop */
+    width: 100%;        /* shrink on mobile */
+    text-align: left;
+    margin: 0 auto 20px auto;
+    padding: 0 10px;    /* breathing room on small screens */
+}
+
+p {
+    color: white;
+    line-height: 1.5;
+}
+
+.image {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 100%;   /* responsive image */
+    height: auto;
+}
+
+/* Sticky footer */
+.footer {
+    margin-top: auto;      /* pushes footer to bottom */
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+ @font-face {
+      font-family: 'Ancient Modern Tales';
+      src: url('Ancient-Modern-Tales.woff2') format('woff2'),
+           url('Ancient-Modern-Tales.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* centers children horizontally */
+    }
+
+    h1 {
+        margin-top: 64px;
+      color: yellow;
+      text-align: center;
+      font-size: 64px;
+      font-family: 'Ancient Modern Tales', sans-serif;
+    }
+
+    h3{
+        color: white;
+        text-align: center;
+        margin-bottom: 0px;
+
+    }
+
+    .text-block {
+      width: 400px;       /* keeps the block narrow */
+      text-align: left;   /* lines stay left-aligned */
+      margin-bottom: 20px;
+    }
+
+    p {
+   
+      color: white;
+      font-family: 'Pixel Operator'; font-weight: normal; font-style: normal;
+      padding-bottom: 12px;
+    }
+
+    .image {
+      display: block;
+      margin: 0 auto; /* centers the image inline */
+    }
+
+     .hero {
+      position: relative;
+      width: 100%;
+      height: 400px; /* Adjust hero height as needed */
+      background-image: url('background.png'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      position: absolute;
+      top: 50%; /* Vertical center */
+      left: 50%; /* Horizontal center */
+      transform: translate(-50%, -50%);
+      color: yellow;
+      font-size: 4rem;
+      
+      margin: 0;
+    }
